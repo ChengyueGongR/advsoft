@@ -25,7 +25,7 @@ If you use this code or our results in your research, you can cite:
 ## DoC-LM + Adv + PartialShuffle
 
 Open the folder `doc-lm` and you can use the doc-lm, which can achieve best performance but cost a lot of time. 
-Since it will take much time to fully training with DoC, we download the [pretrain-model](https://github.com/nttcslab-nlp/doc_lm) and finetune twice. 
+Since it will take much time to fully training with DoC, we download the [pretrained-model](https://github.com/nttcslab-nlp/doc_lm) and finetune twice. 
 
 ### DoC with AWD-LSTM on PTB
 
@@ -42,7 +42,6 @@ Using PartialShuffle only, run the following comands and you can get approximate
 Using Adversarial Training and PartialShuffle, run the following comands and you can get approximately `53.68` / `51.83` (validation / testing). [pretrained-model]()
 
 ### DoC with AWD-LSTM on WT2
-Since it will take much time to fully training with DoC, we download the [pretrain-model](https://github.com/nttcslab-nlp/doc_lm) and finetune twice. 
 
 Using PartialShuffle only, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
 
