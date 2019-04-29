@@ -64,6 +64,17 @@ Run the following command:
 Open the folder `mos-awd-lstm-lm` and you can use the MoS-awd-lstm-lm, which can achieve good performance but also cost a lot of time.
 
 ### PTB with MoS-AWD-LSTM
+
+We first list the results without dynamic evaluation:
+
+| Method      | Valid PPL     | Test PPL     |
+| :----------: | :-----------:  | :-----------: |
+| MoS     | 56.54     | 54.44     |
+| MoS + PartialShuffle    | 55.89     | 53.92     |
+| MoS + Adv     | 55.08     | 52.97     |
+| MoS + Adv +  PartialShuffle    | 54.92     | 52.78     |
+
+
 If you want to use `Adv` only, run the following command:
 + `python3 -u main.py --data data/penn --dropouti 0.4 --dropoutl 0.29 --dropouth 0.225 --seed 28 --batch_size 12 --lr 20.0 --epoch 1000 --nhid 960 --nhidlast 620 --emsize 280 --n_experts 15 --save PTB --single_gpu --switch 200`
 + `python3 -u finetune.py --data data/penn --dropouti 0.4 --dropoutl 0.29 --dropouth 0.225 --seed 28 --batch_size 12 --lr 25.0 --epoch 1000 --nhid 960 --emsize 280 --n_experts 15  --save PATH_TO_FOLDER --single_gpu -gaussian 0 --epsilon 0.028` 
