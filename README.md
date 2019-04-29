@@ -29,6 +29,13 @@ Since it will take much time to fully training with DoC, we download the [pretra
 
 ### DoC with AWD-LSTM on PTB
 
+We list the results without dynamic evaluation:
+
+| Method      | Valid PPL     | Test PPL     |
+| :----------: | :-----------:  | :-----------: |
+| DoC     | 54.18     | 52.38     |
+| DoC + PartialShuffle    | 53.85     | 52.10     |
+| DoC + Adv +  PartialShuffle    | 53.68     | 51.83     |
 
 Using PartialShuffle only, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
 
