@@ -17,9 +17,17 @@ We only focus on training lanaguage models on small scale datasets in this repos
 
 If you use this code or our results in your research, you can cite:
 
+awd-lstm-lm
 ```
+@article{merityRegOpt,
+  title={{Regularizing and Optimizing LSTM Language Models}},
+  author={Merity, Stephen and Keskar, Nitish Shirish and Socher, Richard},
+  journal={arXiv preprint arXiv:1708.02182},
+  year={2017}
+}
 ``` 
 
 ```
-``` .
+```
+.
 
