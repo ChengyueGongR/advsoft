@@ -32,7 +32,7 @@ Since it will take much time to fully training with DoC, we download the [pretra
 We list the results without dynamic evaluation:
 
 | Method      | Valid PPL     | Test PPL     |
-| :----------: | :-----------:  | :-----------: |
+| :---------- | :-----------:  | :-----------: |
 | DoC     | 54.18     | 52.38     |
 | DoC + PartialShuffle    | 53.85     | 52.10     |
 | DoC + Adv +  PartialShuffle    | 53.68     | 51.83     |
@@ -74,7 +74,7 @@ Open the folder `mos-awd-lstm-lm` and you can use the MoS-awd-lstm-lm, which can
 We first list the results without dynamic evaluation:
 
 | Method      | Valid PPL     | Test PPL     |
-| :----------: | :-----------:  | :-----------: |
+| :---------- | :-----------:  | :-----------: |
 | MoS     | 56.54     | 54.44     |
 | MoS + PartialShuffle    | 55.89     | 53.92     |
 | MoS + Adv     | 55.08     | 52.97     |
