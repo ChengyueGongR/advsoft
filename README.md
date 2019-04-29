@@ -1,7 +1,7 @@
 # Language Model Baselines for PyTorch 
 
 This repository contains the code used for the paper:
-+[Improving Neural Language Modeling via Adversarial Training]()
++ [Improving Neural Language Modeling via Adversarial Training]()
 
 This code was originally forked from the [awd-lstm-lm](https://github.com/salesforce/awd-lstm-lm), [MoS-awd-lstm-lm](https://github.com/zihangdai/mos) and [doc-lm](https://github.com/nttcslab-nlp/doc_lm).
 
