@@ -56,6 +56,7 @@ Open the folder `awd-lstm-lm` and you can use the awd-lstm-lm, which can achieve
 Run the following command:
 + `nohup python3 -u main.py --nonmono 5 --batch_size 20 --data data/penn --dropouti 0.3 --dropouth 0.25 --dropout 0.40 --alpha 2 --beta 1 --seed 141 --epoch 4000 --save ptb.pt --switch 200 >> ptb.log 2>&1 &`
 + `source search_dy_hyper.sh` to search the hyper-parameter for dynamic evaluation (lambda, epsilon, learning rate) on validation set, and then apply it on test set.
+
 You can download the [pretrained-model]() or train it from scratch.
 
 ### WT2 with AWD-LSTM
