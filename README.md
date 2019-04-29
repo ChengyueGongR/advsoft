@@ -51,13 +51,14 @@ Open the folder `awd-lstm-lm` and you can use the awd-lstm-lm, which can achieve
 Run the following command:
 + `nohup python3 -u main.py --nonmono 5 --batch_size 20 --data data/penn --dropouti 0.3 --dropouth 0.25 --dropout 0.40 --alpha 2 --beta 1 --seed 141 --epoch 4000 --save ptb.pt --switch 200 >> ptb.log 2>&1 &`
 + `source search_dy_hyper.sh` to search the hyper-parameter for dynamic evaluation (lambda, epsilon, learning rate) on validation set, and then apply it on test set.
-[pretrained-model]()
+You can download the [pretrained-model]() or train it from scratch.
 
 ### WT2 with AWD-LSTM
 Run the following command:
 + `nohup python3 -u main.py --epochs 4000 --nonmono 5 --emsize 400 --batch_size 80 --dropouti 0.5 --data data/wikitext-2 --dropouth 0.2 --seed 1882 --save wt2.pt --gaussian 0.175 --switch 200 >> wt2.log  2>&1 &`
 + `source search_dy_hyper.sh` to search the hyper-parameter for dynamic evaluation (lambda, epsilon, learning rate) on validation set, and then apply it on test set.
-[pretrained-model]()
+
+You can download the [pretrained-model]() or train it from scratch.
 
 ## MoS-AWD-LSTM + Adv + PartialShuffle
 
@@ -81,7 +82,7 @@ If you want to use `Adv` only, run the following command:
 + `cp PATH_TO_FOLDER/finetune_model.pt PATH_TO_FOLDER/model.pt` and run `python3 -u finetune.py --data data/penn --dropouti 0.4 --dropoutl 0.29 --dropouth 0.225 --seed 28 --batch_size 12 --lr 25.0 --epoch 1000 --nhid 960 --emsize 280 --n_experts 15  --save PATH_TO_FOLDER --single_gpu -gaussian 0  --epsilon 0.028` (for three times)
 + `source search_dy_hyper.sh` to search the hyper-parameter for dynamic evaluation (lambda, epsilon, learning rate) on validation set, and then apply it on test set.
 
-To use PartialShuffle, add a command `--partial`, we try to use PartialShuffle only in the last finetune and get `54.92` / `52.78` (validation / testing). [pretrained-model]()
+To use PartialShuffle, add a command `--partial`, we try to use PartialShuffle only in the last finetune and get `54.92` / `52.78` (validation / testing). You can download the [pretrained-model]() or train it from scratch.
 
 ### WT2 with MoS-AWD-LSTM
 If you want to use `Adv` only, Run the following command:
