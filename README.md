@@ -35,7 +35,7 @@ We list the results without dynamic evaluation:
 | :---------- | :-----------:  | :-----------: |
 | DoC     | 54.18     | 52.38     |
 | DoC + PartialShuffle    | 53.85     | 52.10     |
-| DoC + Adv +  PartialShuffle    | 53.68     | 51.83     |
+| DoC + Adv +  PartialShuffle    | 53.52     | 51.82     |
 
 Using PartialShuffle only, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
 
@@ -79,7 +79,7 @@ We first list the results without dynamic evaluation:
 | MoS     | 56.54     | 54.44     |
 | MoS + PartialShuffle    | 55.89     | 53.92     |
 | MoS + Adv     | 55.08     | 52.97     |
-| MoS + Adv +  PartialShuffle    | 54.92     | 52.78     |
+| MoS + Adv +  PartialShuffle    | 54.68     | 52.58     |
 
 
 If you want to use `Adv` only, run the following command:
