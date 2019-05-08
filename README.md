@@ -25,7 +25,7 @@ If you use this code or our results in your research, you can cite:
 ## DoC-LM + Adv + PartialShuffle
 
 Open the folder `doc-lm` and you can use the doc-lm, which can achieve best performance but cost a lot of time. 
-Since it will take much time to fully training with DoC, we download the [pretrained-model](https://github.com/nttcslab-nlp/doc_lm) and finetune twice. 
+Since it will take much time to train DoC from stratch, we download the [pretrained-model](https://github.com/nttcslab-nlp/doc_lm) and finetune the model once. 
 
 ### DoC with AWD-LSTM on PTB
 
