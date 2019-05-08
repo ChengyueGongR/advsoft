@@ -47,25 +47,6 @@ Using PartialShuffle only, run the following comands and you can get approximate
 
 Using Adversarial Training and PartialShuffle, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
 
-## AWD-LSTM-LM + Adv 
-
-Open the folder `awd-lstm-lm` and you can use the awd-lstm-lm, which can achieve good performance and cost less time.
-
-### PTB with AWD-LSTM  
-
-Run the following command:
-+ `nohup python3 -u main.py --nonmono 5 --batch_size 20 --data data/penn --dropouti 0.3 --dropouth 0.25 --dropout 0.40 --alpha 2 --beta 1 --seed 141 --epoch 4000 --save ptb.pt --switch 200 >> ptb.log 2>&1 &`
-+ `source search_dy_hyper.sh` to search the hyper-parameter for dynamic evaluation (lambda, epsilon, learning rate) on validation set, and then apply it on test set.
-
-You can download the [pretrained-model]() or train it from scratch.
-
-### WT2 with AWD-LSTM
-Run the following command:
-+ `nohup python3 -u main.py --epochs 4000 --nonmono 5 --emsize 400 --batch_size 80 --dropouti 0.5 --data data/wikitext-2 --dropouth 0.2 --seed 1882 --save wt2.pt --gaussian 0.175 --switch 200 >> wt2.log  2>&1 &`
-+ `source search_dy_hyper.sh` to search the hyper-parameter for dynamic evaluation (lambda, epsilon, learning rate) on validation set, and then apply it on test set.
-
-You can download the [pretrained-model]() or train it from scratch.
-
 ## MoS-AWD-LSTM + Adv + PartialShuffle
 
 Open the folder `mos-awd-lstm-lm` and you can use the MoS-awd-lstm-lm, which can achieve good performance but also cost a lot of time.
@@ -98,3 +79,23 @@ If you want to use `Adv` only, Run the following command:
 + `source search_dy_hyper.sh` to search the hyper-parameter for dynamic evaluation (lambda, epsilon, learning rate) on validation set, and then apply it on test set.
 
 To use PartialShuffle, add a command `--partial`.
+
+## AWD-LSTM-LM + Adv 
+
+Open the folder `awd-lstm-lm` and you can use the awd-lstm-lm, which can achieve good performance and cost less time.
+
+### PTB with AWD-LSTM  
+
+Run the following command:
++ `nohup python3 -u main.py --nonmono 5 --batch_size 20 --data data/penn --dropouti 0.3 --dropouth 0.25 --dropout 0.40 --alpha 2 --beta 1 --seed 141 --epoch 4000 --save ptb.pt --switch 200 >> ptb.log 2>&1 &`
++ `source search_dy_hyper.sh` to search the hyper-parameter for dynamic evaluation (lambda, epsilon, learning rate) on validation set, and then apply it on test set.
+
+You can download the [pretrained-model]() or train it from scratch.
+
+### WT2 with AWD-LSTM
+Run the following command:
++ `nohup python3 -u main.py --epochs 4000 --nonmono 5 --emsize 400 --batch_size 80 --dropouti 0.5 --data data/wikitext-2 --dropouth 0.2 --seed 1882 --save wt2.pt --gaussian 0.175 --switch 200 >> wt2.log  2>&1 &`
++ `source search_dy_hyper.sh` to search the hyper-parameter for dynamic evaluation (lambda, epsilon, learning rate) on validation set, and then apply it on test set.
+
+You can download the [pretrained-model]() or train it from scratch.
+
