@@ -60,7 +60,7 @@ We first list the results without dynamic evaluation:
 | MoS     | 56.54     | 54.44     |
 | MoS + PartialShuffle    | 55.89     | 53.92     |
 | MoS + Adv     | 55.08     | 52.97     |
-| MoS + Adv +  PartialShuffle  (not finish)  | 54.10     |  52.20     |
+| MoS + Adv +  PartialShuffle  | 54.10     |  52.20     |
 
 
 If you want to use `Adv` only, run the following command:
