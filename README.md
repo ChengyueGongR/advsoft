@@ -22,31 +22,6 @@ If you use this code or our results in your research, you can cite:
 ``` 
 .
 
-## DoC-LM + Adv + PartialShuffle
-
-Open the folder `doc-lm` and you can use the doc-lm, which can achieve best performance but cost a lot of time. 
-Since it will take much time to train DoC from stratch, we download the [pretrained-model](https://github.com/nttcslab-nlp/doc_lm) and finetune the model once. 
-
-### DoC with AWD-LSTM on PTB
-
-We list the results without dynamic evaluation:
-
-| Method      | Valid PPL     | Test PPL     |
-| :---------- | :-----------:  | :-----------: |
-| DoC     | 54.18     | 52.38     |
-| DoC + PartialShuffle    | 53.85     | 52.10     |
-| DoC + Adv +  PartialShuffle    | 53.52     | 51.82     |
-
-Using PartialShuffle only, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
-
-Using Adversarial Training and PartialShuffle, run the following comands and you can get approximately `53.68` / `51.83` (validation / testing). [pretrained-model]()
-
-### DoC with AWD-LSTM on WT2
-
-Using PartialShuffle only, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
-
-Using Adversarial Training and PartialShuffle, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
-
 ## MoS-AWD-LSTM + Adv + PartialShuffle
 
 Open the folder `mos-awd-lstm-lm` and you can use the MoS-awd-lstm-lm, which can achieve good performance but also cost a lot of time.
@@ -99,3 +74,27 @@ Run the following command:
 
 You can download the [pretrained-model]() along with the log file or train it from scratch.
 
+## DoC-LM + Adv + PartialShuffle
+
+Open the folder `doc-lm` and you can use the doc-lm, which can achieve best performance but cost a lot of time. 
+Since it will take much time to train DoC from stratch, we download the [pretrained-model](https://github.com/nttcslab-nlp/doc_lm) and finetune the model once. 
+
+### DoC with AWD-LSTM on PTB
+
+We list the results without dynamic evaluation:
+
+| Method      | Valid PPL     | Test PPL     |
+| :---------- | :-----------:  | :-----------: |
+| DoC     | 54.18     | 52.38     |
+| DoC + PartialShuffle    | 53.85     | 52.10     |
+| DoC + Adv +  PartialShuffle    | 53.52     | 52.02     |
+
+Using PartialShuffle only, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
+
+Using Adversarial Training and PartialShuffle, run the following comands and you can get approximately `53.52` / `52.02` (validation / testing). [pretrained-model]()
+
+### DoC with AWD-LSTM on WT2
+
+Using PartialShuffle only, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
+
+Using Adversarial Training and PartialShuffle, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
