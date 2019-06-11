@@ -28,7 +28,6 @@ If you use this code or our results in your research, you can choose to cite:
 }
 
 ``` 
-.
 
 ### Warning
 Also the repo is implemented in `pytorch 0.4`, we have found that the post process can only work well with `pytorch 0.2`. Therefore, we add a patch for dynamic evaluation and it should be run under `pytorch 0.2`.
