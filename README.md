@@ -56,7 +56,7 @@ If you want to use `Adv` only, run the following command:
 + `cp PATH_TO_FOLDER/finetune_model.pt PATH_TO_FOLDER/model.pt` and run `python3 -u finetune.py --data data/penn --dropouti 0.4 --dropoutl 0.5 --dropouth 0.225 --seed 28 --batch_size 12 --lr 25.0 --epoch 1000 --nhid 960 --emsize 280 --n_experts 15  --save PATH_TO_FOLDER --single_gpu -gaussian 0  --epsilon 0.028` 
 + `source search_dy_hyper.sh` to search the hyper-parameter for dynamic evaluation (lambda, epsilon, learning rate) on validation set, and then apply it on test set.
 
-To use PartialShuffle, add a command `--partial`, we try to use PartialShuffle only in the last finetune and get `54.92` / `52.78` (validation / testing). You can download the [pretrained-model]() along with the log file or train it from scratch.
+To use PartialShuffle, add a command `--partial`, we try to use PartialShuffle only in the last finetune and get `54.92` / `52.78` (validation / testing). You can download the [pretrained-model](https://drive.google.com/open?id=1w8hF9e-DUGKJPnH9DMtU6G22FOTzFQJJ) along with the log file or train it from scratch.
 
 ### WT2 with MoS-AWD-LSTM
 If you want to use `Adv` only, Run the following command:
