@@ -3,21 +3,29 @@
 This repository contains the code used for the paper:
 + [Improving Neural Language Modeling via Adversarial Training]()
 
-This code was originally forked from the [awd-lstm-lm](https://github.com/salesforce/awd-lstm-lm), [MoS-awd-lstm-lm](https://github.com/zihangdai/mos) and [doc-lm](https://github.com/nttcslab-nlp/doc_lm).
+This code was originally forked from the [awd-lstm-lm](https://github.com/salesforce/awd-lstm-lm) and [MoS-awd-lstm-lm](https://github.com/zihangdai/mos).
 
 Except the method in our paper, we also implement a recent proposed regularization called [PartialShuffle](https://github.com/ofirpress/PartialShuffle). We find that combining this techique with our method can further improve the performance for langauge models.
 
 The model comes with instructions to train: word level language models over the Penn Treebank (PTB), [WikiText-2](https://einstein.ai/research/the-wikitext-long-term-dependency-language-modeling-dataset) (WT2), and [WikiText-103](https://einstein.ai/research/the-wikitext-long-term-dependency-language-modeling-dataset) (WT103) datasets. (The code and pre-trained model for WikiText-103 will be merged into the branch soon.)
 
-We only focus on training lanaguage models on small scale datasets in this repository. We think that 
-+ Building a better density estimation itself should have scientific values.
-+ If a method can outperform very strong language model baselines on small scale datasets, it is more likely to perform better on large scale datasets. This repository can help researchers to quickly verify their ideas on small scale datasets.
-+ Language models on large scale datasets can  be used to perform unsupervised feature learning, and the techiques included in this repository all only depends on the SoftMax and Embedding Layers. That is to say, you can transfer these techiques with different NNs (e.g. transformer, CNNs, RNNs, etc).
-+ Language generation tasks, e.g. seq2seq, are different from language modeling. However, it also depends on the representation of the embeddings and softmax weights. Again, the techiques included in this repository all focus on the representation of embeddings and softmax weights. Some of them (e.g. MoS, Adversarial) has been proved to be useful for machine translation tasks.
 
-If you use this code or our results in your research, you can cite:
+If you use this code or our results in your research, you can choose to cite:
 
 ```
+@InProceedings{pmlr-v97-wang19f,
+  title = 	 {Improving Neural Language Modeling via Adversarial Training},
+  author = 	 {Wang, Dilin and Gong, Chengyue and Liu, Qiang},
+  booktitle = 	 {Proceedings of the 36th International Conference on Machine Learning},
+  pages = 	 {6555--6565},
+  year = 	 {2019},
+  editor = 	 {Chaudhuri, Kamalika and Salakhutdinov, Ruslan},
+  volume = 	 {97},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Long Beach, California, USA},
+  month = 	 {09--15 Jun},
+  publisher = 	 {PMLR},
+}
 
 ``` 
 .
@@ -76,27 +84,3 @@ Run the following command:
 
 You can download the [pretrained-model]() along with the log file or train it from scratch.
 
-## DoC-LM + Adv + PartialShuffle
-
-Open the folder `doc-lm` and you can use the doc-lm, which can achieve best performance but cost a lot of time. 
-Since it will take much time to train DoC from stratch, we download the [pretrained-model](https://github.com/nttcslab-nlp/doc_lm) and finetune the model once. 
-
-### DoC with AWD-LSTM on PTB
-
-We list the results without dynamic evaluation:
-
-| Method      | Valid PPL     | Test PPL     |
-| :---------- | :-----------:  | :-----------: |
-| DoC     | 54.18     | 52.38     |
-| DoC + PartialShuffle    | 53.85     | 52.10     |
-| DoC + Adv +  PartialShuffle    | 53.52     | 52.02     |
-
-Using PartialShuffle only, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
-
-Using Adversarial Training and PartialShuffle, run the following comands and you can get approximately `53.52` / `52.02` (validation / testing). [pretrained-model]()
-
-### DoC with AWD-LSTM on WT2
-
-Using PartialShuffle only, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
-
-Using Adversarial Training and PartialShuffle, run the following comands and you can get approximately `53.85` / `52.10` (validation / testing).
