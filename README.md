@@ -68,7 +68,7 @@ If you want to use `Adv` only, Run the following command:
 
 To use PartialShuffle, add a command `--partial`.
 
-## AWD-LSTM-LM + Adv 
+## AWD-LSTM-LM + Adv  (building...)
 
 Open the folder `awd-lstm-lm` and you can use the awd-lstm-lm, which can achieve good performance and cost less time.
 
