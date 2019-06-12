@@ -85,7 +85,7 @@ parser.add_argument('--final_switch', type=int, default=10000,
 parser.add_argument('--partial', action='store_false',
                     help='use partial shuffle')
 
-parser.set_defaults(partial=True)
+parser.set_defaults(partial=False)
 
 args = parser.parse_args()
 
