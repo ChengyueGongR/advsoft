@@ -95,7 +95,7 @@ parser.add_argument('--gaussian', type=float, default=0.15,
 parser.add_argument('--partial', action='store_false',
                     help='use partial shuffle')
 
-parser.set_defaults(partial=True)
+parser.set_defaults(partial=False)
 
 args = parser.parse_args()
 
