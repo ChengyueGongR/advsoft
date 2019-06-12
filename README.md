@@ -85,5 +85,5 @@ Run the following command:
 + `nohup python3 -u main.py --epochs 4000 --nonmono 5 --emsize 400 --batch_size 80 --dropouti 0.5 --data data/wikitext-2 --dropouth 0.2 --seed 1882 --save wt2.pt --gaussian 0.175 --switch 200 >> wt2.log  2>&1 &`
 + `source search_dy_hyper.sh` to search the hyper-parameter for dynamic evaluation (lambda, epsilon, learning rate) on validation set, and then apply it on test set.
 
-You can download the [pretrained-model]() along with the log file or train it from scratch.
+You can download the [pretrained-model](https://drive.google.com/open?id=1462OT2bD3h-LVxcrtGIUpzJO2CCGGgnc) along with the log file or train it from scratch.
 
