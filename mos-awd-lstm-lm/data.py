@@ -29,8 +29,24 @@ class Corpus(object):
     def __init__(self, path):
         self.dictionary = Dictionary()
         import pickle
-        with open('dictionary_ptb', 'rb') as file:
-            self.dictionary = pickle.load(file)
+        name = path.split('/')[1]
+        if os.path.exists('dictionary_' + name):
+            with open('dictionary_' + name, 'rb') as file:
+                self.dictionary = pickle.load(file)
+        else:
+            self.tokenize(os.path.join(path, 'train.txt'))
+            self.tokenize(os.path.join(path, 'valid.txt'))
+            self.tokenize(os.path.join(path, 'test.txt'))
+            new_dict = [(self.dictionary.counter[i], i) for i in self.dictionary.word2idx]
+            new_dict.sort(key=lambda x: x[0])
+            new_dict.reverse()
+            for i in range(len(new_dict)):
+                self.dictionary.word2idx[new_dict[i][1]] = i
+                self.dictionary.idx2word[i] = new_dict[i][1] 
+                self.dictionary.counter[i] = new_dict[i][0]
+            with open('dictionary_' + name, 'wb') as file:
+                pickle.dump(self.dictionary, file)
+        #print(self.dictionary.word2idx)
         self.train = self.tokenize_(os.path.join(path, 'train.txt'))
         self.valid = self.tokenize_(os.path.join(path, 'valid.txt'))
         self.test = self.tokenize_(os.path.join(path, 'test.txt'))
@@ -71,5 +87,3 @@ class Corpus(object):
                     token += 1
 
         return ids
-
-
